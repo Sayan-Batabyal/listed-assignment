@@ -17,7 +17,7 @@ const Dasboard = () => {
 
     return (
         <div className='flex  gap-10 p-8 w-full lg:h-[1024px] min-h-screen bg-primary'>
-            <div className='w-1/5 '>
+            <div className=' w-1/5 '>
                 <Sidebar />
             </div>
             <div className='flex flex-col w-4/5 pr-10 gap-8'>
