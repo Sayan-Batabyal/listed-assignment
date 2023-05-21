@@ -16,9 +16,9 @@ ChartJS.register(
 )
 const LineGraph = () => {
     const data = {
-        labels: ["","Week 1","", "Week 2","", "Week 3","", "Week 4",""],
+        labels: ["", "Week 1", "", "Week 2", "", "Week 3", "", "Week 4", ""],
         datasets: [{
-            data: [200, 380, 260, 206,260,300, 250,220,450],
+            data: [200, 380, 260, 206, 260, 300, 250, 220, 450],
             backgroundColor: 'transparent',
             borderColor: '#E9A0A0',
             pointBorderColor: 'transparent',
@@ -26,20 +26,23 @@ const LineGraph = () => {
             tension: 0.4
         },
         {
-            data: [100, 400, 300, 150,290,440, 350,180,250],
+            data: [100, 400, 300, 150, 290, 440, 350, 180, 250],
             backgroundColor: 'transparent',
             borderColor: '#9BDD7C',
             pointBorderColor: 'transparent',
             pointBorderWidth: 4,
             tension: 0.4
         }
-    ],
-        
+        ],
+
     };
     const options = {
-        aspectRatio:12/2,
+        aspectRatio: 4.5,
         plugins: {
-            legens: false
+            legend:{
+                display: false
+            } 
+                
         },
         scales: {
             x: {
@@ -49,27 +52,27 @@ const LineGraph = () => {
             },
             y: {
                 min: 0, max: 500, ticks: {
-                    gap:1,
+                    gap: 1,
                     stepSize: 100,
                 }
             }
         }
     };
     return (
-        <div className='w-full px-8'>
+        <div className='w-full px-10 py-6 h-full'>
             <p className='text-xl font-bold'>Activities</p>
-            <div className='flex justify-between'>
-            <p className='text-[#858585] text-sm mb-2'>May-June 2021 <i className='fa fa-angle-down'></i></p>
-            <div className='flex items-center gap-4'>
-            <div className='flex gap-1 items-center'>
-            <div className='w-2 h-2 bg-[#E9A0A0] rounded-full'></div>
-            Guests
-            </div>
-            <div className='flex gap-1 items-center'>
-            <div className='w-2 h-2 bg-[#9BDD7C] rounded-full'></div>
-            Users
-            </div>
-            </div>
+            <div className='flex justify-between mr-10 mb-10'>
+                <p className='text-[#858585] text-sm mb-2'>May-June 2021 <i className='fa fa-angle-down'></i></p>
+                <div className='flex items-center gap-4'>
+                    <div className='flex gap-1 items-center'>
+                        <div className='w-2 h-2 bg-[#E9A0A0] rounded-full'></div>
+                        Guests
+                    </div>
+                    <div className='flex gap-1 items-center'>
+                        <div className='w-2 h-2 bg-[#9BDD7C] rounded-full'></div>
+                        Users
+                    </div>
+                </div>
             </div>
             <Line data={data} options={options}></Line>
         </div>
