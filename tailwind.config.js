@@ -7,7 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'lato': ['Lato', 'sans-serif']
+
+        'lato': ['Lato', 'sans-serif'],
+        'monte':['Montserrat', 'sans-serif']
+
       },
       colors: {
         'primary': '#F5F5F5',

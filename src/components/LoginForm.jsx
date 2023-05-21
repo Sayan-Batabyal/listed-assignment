@@ -28,39 +28,36 @@ const LoginForm = () => {
         ref.current,
         {theme:"light",size:"large"}
       )
-    
-    
-      
-      },[nav])
+  },[nav])
 
       
       
   return (
-    <div className='lg:px-[28%] p-20 gap-4 flex flex-col items-center justify-center'>
+    <div className='lg:px-[28%] w-[95%] p-20 gap-4 flex flex-col items-center justify-center'>
         <div className='hidden' ref={ref}></div>
         <div className='w-full flex flex-col gap-2 text-left'>
         <span className='text-4xl font-bold '>Sign In</span>
         <span className='font-normal font-lato'>Sign in to your account</span>
         </div>
         <div className='flex items-center justify-between font-lato w-full'>
-            <div className='flex items-center justify-center bg-white px-5 py-2 text-[#858585] rounded-xl gap-2' >
-             <GoogleLogo className='w-5' />   
-            <button className='text-sm ' onClick={handleSignIn}>Sign in with Google</button>
+            <div className='flex items-center justify-center bg-white px-4 py-1 text-[#858585] rounded-lg gap-2' >
+             <GoogleLogo className='w-4' />   
+            <button className='text-sm' onClick={handleSignIn}>Sign in with Google</button>
             </div>
-            <div className='flex items-center justify-center bg-white px-7 py-2 text-[#858585] rounded-xl gap-2'>
-            <AppleLogo className='w-5'/>
+            <div className='flex items-center justify-center bg-white px-6 py-1 text-[#858585] rounded-lg gap-2'>
+            <AppleLogo className='w-4'/>
             <button className='text-sm'>Sign in with Apple</button>
             </div>
         </div>
-        <div className='w-full flex flex-col'>
-            <form className='flex flex-col gap-4 bg-white p-8 rounded-3xl'>
+        <div className='flex flex-col w-full'>
+            <form className='flex flex-col gap-4 bg-white p-8 text-base rounded-3xl'>
                 <div className='flex flex-col gap-1'>
                 <label>Email address</label>
                 <input className='bg-primary font-lato px-4 py-2 rounded-lg text-base focus:outline-0 focus:bg-[#EAEAEA]' type="email" required placeholder="johndoe@gmail.com"/>
                 </div>
                 <div className='flex flex-col gap-1'>
                 <label>Password</label>
-                <input className='bg-primary font-lato p-4 py-2 rounded-lg focus:outline-0 focus:bg-[#EAEAEA]' type="password" required placeholder=""/>
+                <input className='bg-primary font-lato p-4 py-2 rounded-lg text-base focus:outline-0 focus:bg-[#EAEAEA]' type="password" required placeholder=""/>
                 </div>
                 <Link to={"/"} className='text-[#346BD4] font-lato'>Forgot password?</Link>
                 <button type='submit' className='bg-black text-white font-bold px-4 py-2 rounded-lg '>Sign In</button>
