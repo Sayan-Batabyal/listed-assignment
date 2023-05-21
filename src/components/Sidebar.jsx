@@ -5,11 +5,9 @@ import {IoSettingsOutline} from 'react-icons/io5'
 import {BiUserCircle} from 'react-icons/bi'
 import {BsTags} from 'react-icons/bs'
 import {TbCalendarTime} from 'react-icons/tb'
-
 const Sidebar = () => {
   return (
     <div className='bg-black w-full h-full rounded-3xl flex  flex-col p-10 justify-between'>
-     
      <div className='flex flex-col gap-11'>
      <span className='text-white text-4xl font-bold'>Board.</span>
      <ul className='text-white text-lg flex flex-col gap-5'>
