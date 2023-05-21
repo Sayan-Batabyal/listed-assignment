@@ -17,12 +17,12 @@ const Dasboard = () => {
 
     return (
         <div className='flex  gap-10 p-8 w-full lg:h-[1024px] min-h-screen bg-primary'>
-            <div className=' w-1/5 '>
+            <div className='hidden lg:flex w-1/5 '>
                 <Sidebar />
             </div>
-            <div className='flex flex-col w-4/5 pr-10 gap-8'>
+            <div className='flex flex-col w-full gap-8'>
                 <Navbar userDp={user.picture} />
-                <div className='flex gap-8 h-1/6  justify-between items-center'>
+                <div className='grid grid-cols-8 gap-8 lg:h-1/6 content-center'>
                     <Widgets icon={<RevIcon className='w-4' />} itemName='Total Revenues' itmCnt='$2,129,430' bgCol='#DDEFE0' />
                     <Widgets icon={<TraIcon className='w-4' />} itemName='Total Transactions' itmCnt='1520' bgCol='#F4ECDD' />
                     <Widgets icon={<LikeIcon className='w-4' />} itemName='Total Likes' itmCnt='9721' bgCol='#EFDADA' />
@@ -32,11 +32,11 @@ const Dasboard = () => {
                 <div className='bg-white w-full p-4 rounded-xl'>
                     <LineGraph />
                 </div>
-                <div className='flex gap-10'>
-                    <div className='w-1/2 bg-white rounded-xl' >
+                <div className='grid grid-cols-8 gap-10'>
+                    <div className='col-span-8 lg:col-span-4 bg-white rounded-xl' >
                         <PieChart />
                     </div>
-                    <div className='w-1/2 bg-white rounded-xl'>
+                    <div className='col-span-8 lg:col-span-4 bg-white rounded-xl'>
                         <Schedule/>
                     </div>
                 </div>

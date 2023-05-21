@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import {
     Chart as ChartJS,
@@ -15,6 +15,7 @@ ChartJS.register(
     PointElement
 )
 const LineGraph = () => {
+    const ref=useRef(null)
     const data = {
         labels: ["", "Week 1", "", "Week 2", "", "Week 3", "", "Week 4", ""],
         datasets: [{
@@ -36,8 +37,25 @@ const LineGraph = () => {
         ],
 
     };
+
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+      useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowSize(window.innerWidth);
+          
+        };
+          
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
+
+
     const options = {
-        aspectRatio: 4.5,
+        aspectRatio: `${windowSize > 500 ? 4.5:1}`,
         plugins: {
             legend:{
                 display: false
@@ -59,9 +77,9 @@ const LineGraph = () => {
         }
     };
     return (
-        <div className='w-full px-10 py-6 h-full'>
+        <div ref={ref} className='w-full px-3 lg:px-10 lg:py-6 py-2 h-full'>
             <p className='text-xl font-bold'>Activities</p>
-            <div className='flex justify-between mr-10 mb-10'>
+            <div className='flex justify-between mr-3 lg:mr-10 mb-4 lg:mb-10'>
                 <p className='text-[#858585] text-sm mb-2'>May-June 2021 <i className='fa fa-angle-down'></i></p>
                 <div className='flex items-center gap-4'>
                     <div className='flex gap-1 items-center'>

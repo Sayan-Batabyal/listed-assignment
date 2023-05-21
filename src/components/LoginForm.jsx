@@ -38,18 +38,18 @@ const LoginForm = () => {
       
       
   return (
-    <div className='lg:px-[28%] w-full p-20  gap-4 flex flex-col items-center justify-center'>
+    <div className='lg:px-[28%]  w-full p-10 gap-4 mt-20 flex flex-col items-center justify-center'>
         <div className='hidden' ref={ref}></div>
         <div className='w-full flex flex-col gap-2 text-left'>
         <span className='text-4xl font-bold '>Sign In</span>
         <span className='font-normal font-lato'>Sign in to your account</span>
         </div>
-        <div className='flex items-center justify-between font-lato w-full'>
-            <div className='flex items-center justify-center bg-white px-5 py-2 text-[#858585] rounded-xl gap-2' >
+        <div className='grid grid-cols-10 gap-4 items-center justify-between font-lato'>
+            <div className='col-span-10 lg:col-span-5 flex items-center justify-center bg-white px-5 py-2 text-[#858585] rounded-xl gap-2' >
              <GoogleLogo className='w-4' />   
             <button className='text-sm' onClick={handleSignIn}>Sign in with Google</button>
             </div>
-            <div className='flex items-center justify-center bg-white px-7 py-2 text-[#858585] rounded-xl gap-2'>
+            <div className='col-span-10 lg:col-span-5 flex items-center justify-center bg-white px-7 py-2 text-[#858585] rounded-xl gap-2'>
             <AppleLogo className='w-4'/>
             <button className='text-sm'>Sign in with Apple</button>
             </div>

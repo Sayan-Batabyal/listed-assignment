@@ -3,7 +3,7 @@ import Meet from './Meet'
 
 const Schedule = () => {
   return (
-    <div className='flex flex-col gap-4 p-10'>
+    <div className='flex flex-col gap-4 p-6 lg:p-8'>
         <div className='flex items-center justify-between'>
                 <p className='text-lg font-bold'>Today's schedule</p>
                 <p className='text-[#858585] text-xs mb-2'>See All <i className='fa fa-angle-right'></i></p>

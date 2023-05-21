@@ -5,7 +5,7 @@ import Dasboard from "./pages/Dasboard";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-primary">
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/dash" element={<Dasboard/>} />

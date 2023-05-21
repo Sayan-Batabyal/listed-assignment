@@ -29,13 +29,13 @@ const PieChart = () => {
     return (
 
 
-        <div className='flex flex-col p-8 gap-4'>
+        <div className='flex flex-col p-4 lg:p-8 gap-4'>
             <div className='flex justify-between'>
                 <p className='text-lg font-bold'>Top Products</p>
                 <p className='text-[#858585] text-sm mb-2'>May - June 2021 <i className='fa fa-angle-down'></i></p>
             </div>
-            <div className='flex gap-12 items-center justify-center'>
-                <div className='w-[120px] h-[120px]'>
+            <div className='flex gap-4 lg:gap-14 items-center justify-center'>
+                <div className='w-[100px] lg:w-[120px] lg:h-[120px] h-[100px]'>
                     <Pie data={data} options={options}></Pie>
                 </div>
                 <div className='flex flex-col gap-5'>
