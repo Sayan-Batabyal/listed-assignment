@@ -9,7 +9,7 @@ const Widgets = ({ load = "", icon = "Icon", itemName = "sayan", itmCnt, bgCol =
       <div className='flex wt-full flex-row-reverse'>{(load)? <Skeleton variant="circular" width={40} height={40} /> :icon}</div>
       <div className='flex flex-col gap-1'>
       {(load)? <Skeleton variant="text" width={'40%'} height={20} /> :<p className='lg:text-sm text-xs'>{itemName}</p>}
-      {(load)? <Skeleton variant="text" width={'70%'} height={40} /> : <p className='lg:text-2xl text-lg font-bold'>{itmCnt}</p>}
+      {(load)? <Skeleton variant="text" width={'70%'} height={40} /> : <p className='lg:text-2xl text-base font-bold'>{itmCnt}</p>}
       </div>
     </div>
   )
