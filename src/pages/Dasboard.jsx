@@ -11,7 +11,7 @@ import "../components/css-skeletons.min.css"
 import axios from 'axios'
 
 const Dasboard = () => {
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState({picture:"name"})
     const [load, setLoad] = useState(true)
     const [chartData,setChartData]=useState({})
 

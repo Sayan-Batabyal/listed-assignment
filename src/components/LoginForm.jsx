@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { AppleLogo, GoogleLogo } from '../utils/Svg'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 const LoginForm = () => {
     const nav=useNavigate();
@@ -12,13 +12,18 @@ const LoginForm = () => {
 
       const handleSubmit=(e)=>{
           e.preventDefault();
-          nav("/")
+          google.accounts.id.prompt();
+         
       }
+     
+     
       const ref=useRef(null)
+
+
     useEffect(() => {
         /* global google  */
         const handleCallback=(res)=>{
-            localStorage.setItem('userToken',res.credential)
+            localStorage.setItem('userToken',res.credential);
             nav("/")
             
         }
