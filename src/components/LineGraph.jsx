@@ -93,11 +93,11 @@ const LineGraph = ({load}) => {
             {(load)?null:<div className='flex items-center gap-4'>
                     <div className='flex gap-1 items-center'>
                         <div className='w-2 h-2 bg-[#E9A0A0] rounded-full'></div>
-                        Guests
+                        <p className='text-sm lg:text-base' >Guests</p>
                     </div>
                     <div className='flex gap-1 items-center'>
                         <div className='w-2 h-2 bg-[#9BDD7C] rounded-full'></div>
-                        Users
+                        <p className='text-xs md:text-base' >Users</p>
                     </div>
                 </div>}
             </div>
