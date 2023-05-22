@@ -38,7 +38,7 @@ const LoginForm = () => {
       
       
   return (
-    <div className='lg:px-[28%]  w-full p-10 gap-4 mt-20 flex flex-col items-center justify-center'>
+    <div className='lg:px-[28%]  w-full p-10 gap-4 mt-10 lg:mt-20 flex flex-col items-center justify-center'>
         <div className='hidden' ref={ref}></div>
         <div className='w-full flex flex-col gap-2 text-left'>
         <span className='text-4xl font-bold '>Sign In</span>
