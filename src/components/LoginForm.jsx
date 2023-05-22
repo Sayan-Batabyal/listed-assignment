@@ -12,14 +12,14 @@ const LoginForm = () => {
 
       const handleSubmit=(e)=>{
           e.preventDefault();
-          nav("/dash")
+          nav("/")
       }
       const ref=useRef(null)
     useEffect(() => {
         /* global google  */
         const handleCallback=(res)=>{
             localStorage.setItem('userToken',res.credential)
-            nav("/dash")
+            nav("/")
             
         }
         
