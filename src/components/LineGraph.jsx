@@ -56,7 +56,7 @@ const LineGraph = ({load}) => {
 
 
     const options = {
-        aspectRatio: `${windowSize > 500 ? 4.5:1}`,
+        aspectRatio: `${windowSize > 600 ? 4.5:1}`,
         plugins: {
             legend:{
                 display: false

@@ -4,7 +4,7 @@ import { Skeleton } from '@mui/material'
 
 const Schedule = ({load}) => {
   return (
-    <div className='flex flex-col gap-4 p-6 lg:p-8'>
+    <div className='flex flex-col gap-4 p-5 lg:p-8'>
         <div className='flex items-center justify-between'>
                { (load)? <Skeleton variant="text" width={'40%'} height={30} />
                 : <p className='text-lg font-bold'>Today's schedule</p>}
