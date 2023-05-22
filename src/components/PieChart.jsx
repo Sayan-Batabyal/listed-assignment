@@ -35,7 +35,7 @@ const PieChart = ({load}) => {
             {(load)? <Skeleton variant="text" width={'30%'} height={30} /> :<p className='text-lg font-bold'>Top Products</p>}
             {(load)? <Skeleton variant="text" width={'20%'} height={30} /> :  <p className='text-[#858585] text-sm mb-2'>May - June 2021 <i className='fa fa-angle-down'></i></p>}
             </div>
-            <div className='flex  items-center justify-evenly'>
+            <div className='flex  items-center gap-3 justify-evenly'>
                 <div className='w-[100px] lg:w-[120px] lg:h-[120px] h-[100px]'>
                 {(load)? <Skeleton variant="circular" width={120} height={120} /> :<Pie data={data} options={options}></Pie>}
                 </div>

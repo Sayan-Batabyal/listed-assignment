@@ -8,18 +8,35 @@ import LineGraph from '../components/LineGraph'
 import PieChart from '../components/PieChart'
 import Schedule from '../components/Schedule'
 import "../components/css-skeletons.min.css"
-import { Skeleton, Stack } from '@mui/material'
+import axios from 'axios'
 
 const Dasboard = () => {
     const [user, setUser] = useState({})
     const [load, setLoad] = useState(true)
+    const [chartData,setChartData]=useState({})
 
+    useEffect(() => {
+      setLoad(true);  
+      const getData=()=>{
+        axios.post("https://rose-concerned-narwhal.cyclic.app/api/data").then((data)=>{
+         console.log(data);   
+         setChartData(data.data)
+        })
+      }
+      getData();
+      setTimeout(()=>{
+        setLoad(false)
+     },2000)
+      
+    }, [])
+
+
+   
+    
     useEffect(() => {
         const decoded = jwtDecode(localStorage.getItem('userToken'))
         setUser(decoded)
-        setTimeout(() => {
-            setLoad(false)
-        }, 2000)
+        
     }, [])
 
     return (
@@ -36,7 +53,7 @@ const Dasboard = () => {
                     <Widgets load={load} icon={<UserIcon className='w-4' />} itemName='Total Users' itmCnt='892' bgCol='#DEE0EF' />
                 </div>
                 <div className='w-full p-4 rounded-xl bg-white'>
-                    <LineGraph load={load} />
+                    <LineGraph load={load} chartData={chartData} />
                 </div>
                 <div className='grid grid-cols-8 gap-10'>
                     <div className='col-span-8 lg:col-span-4 bg-white rounded-xl' >

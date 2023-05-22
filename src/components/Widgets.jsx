@@ -1,7 +1,6 @@
 import React from 'react'
 import "../components/css-skeletons.min.css"
 import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
 const Widgets = ({ load = "", icon = "Icon", itemName = "sayan", itmCnt, bgCol = '' }) => {
   return (
 

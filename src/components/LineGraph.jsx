@@ -15,12 +15,14 @@ ChartJS.register(
     LinearScale,
     PointElement
 )
-const LineGraph = ({load}) => {
+const LineGraph = ({load,chartData}) => {
     const ref=useRef(null)
+
+      
     const data = {
-        labels: ["", "Week 1", "", "Week 2", "", "Week 3", "", "Week 4", ""],
+        labels: load?[]:[...chartData.lineLabel],
         datasets: [{
-            data: [200, 380, 260, 206, 260, 300, 250, 220, 450],
+            data: load?[]:[...chartData.lineData[0]],
             backgroundColor: 'transparent',
             borderColor: '#E9A0A0',
             pointBorderColor: 'transparent',
@@ -28,7 +30,7 @@ const LineGraph = ({load}) => {
             tension: 0.4
         },
         {
-            data: [100, 400, 300, 150, 290, 440, 350, 180, 250],
+            data: load?[]:[...chartData.lineData[1]],
             backgroundColor: 'transparent',
             borderColor: '#9BDD7C',
             pointBorderColor: 'transparent',
