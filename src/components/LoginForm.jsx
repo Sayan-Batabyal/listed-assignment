@@ -3,6 +3,8 @@ import { AppleLogo, GoogleLogo } from '../utils/Svg'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 const LoginForm = () => {
+
+  window.onload = function () {window.location.reload()}
     const nav=useNavigate();
     
       const handleSignIn=(e)=>{
@@ -18,7 +20,6 @@ const LoginForm = () => {
      
      
       const ref=useRef(null)
-
 
     useEffect(() => {
         /* global google  */

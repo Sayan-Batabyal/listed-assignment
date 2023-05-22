@@ -1,6 +1,9 @@
+import { useEffect } from 'react'
 import LoginForm from '../components/LoginForm'
 
+
 const Login = () => {
+ 
   return (
     <div className='w-full min-h-screen bg-primary flex' >
     <div className='hidden lg:flex bg-black text-white text-lg flex w-2/5 items-center justify-center' >
