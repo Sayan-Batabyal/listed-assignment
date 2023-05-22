@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App bg-primary">
       <Routes>
-        <Route path="/" element={<Login/>} />
+        <Route exact path="/" element={<Login/>} />
         <Route path="/dash" element={<Dasboard/>} />
       </Routes>
     </div>
