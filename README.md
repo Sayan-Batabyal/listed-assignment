@@ -2,7 +2,7 @@
 # Listed FrontEnd Assignment
 ## Minimalistic Dashboard UI 
 ### React | TailwindCSS
-#### Deployed : [https://listed-assignment-sayan-batabyal.vercel.app/](url)
+#### Deployed : [(https://listed-assignment-sayan-batabyal.vercel.app/)](url)
 
 ##### 1. Added Demo-Server calls for the Line Graph
 ##### 2. Responsive for large and mobile screens
