@@ -1,12 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { AppleLogo, GoogleLogo } from '../utils/Svg'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const LoginForm = () => {
 
-    useEffect(() => {
-      window.onload = function () {window.location.reload()}
-    }, [])
     
     const nav=useNavigate();
     
